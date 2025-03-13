@@ -52,11 +52,11 @@ class MainActivity : AppCompatActivity() {
                     tvtext.text="平局，請在試一次"
                 }
                 (myguess ==0 && computerguess == 2)||
-                    (myguess == 1 && computerguess == 0)||
-                    (myguess == 2 && computerguess == 1)->{
-                        tvwinner.text="$playername"
-                        tvtext.text="恭喜你獲勝了"
-                    }
+                        (myguess == 1 && computerguess == 0)||
+                        (myguess == 2 && computerguess == 1)->{
+                    tvwinner.text="$playername"
+                    tvtext.text="恭喜你獲勝了"
+                }
                 else->{
                     tvwinner.text="電腦"
                     tvtext.text="可惜，電腦獲勝了"
