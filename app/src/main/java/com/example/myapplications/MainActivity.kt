@@ -43,22 +43,22 @@ class MainActivity : AppCompatActivity() {
                 R.id.radioButton3 -> 2
                 else-> 3
             }
-            tvname.text="$playername"
-            tvmyguess.text="${getstring(myguess)}"
-            tvcomputerguess.text="${getstring(computerguess)}"
+            tvname.text="名字\n$playername"
+            tvmyguess.text="我方出拳\n${getstring(myguess)}"
+            tvcomputerguess.text="電腦出拳\n${getstring(computerguess)}"
             when{
                 myguess==computerguess->{
-                    tvwinner.text="平手"
+                    tvwinner.text="勝利者\n平手"
                     tvtext.text="平局，請在試一次"
                 }
                 (myguess ==0 && computerguess == 2)||
                         (myguess == 1 && computerguess == 0)||
                         (myguess == 2 && computerguess == 1)->{
-                    tvwinner.text="$playername"
+                    tvwinner.text="勝利者\n$playername"
                     tvtext.text="恭喜你獲勝了"
                 }
                 else->{
-                    tvwinner.text="電腦"
+                    tvwinner.text="勝利者\n電腦"
                     tvtext.text="可惜，電腦獲勝了"
                 }
             }
